@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mvnsearch.mybatis.demo.repo.ShopMapper">
+
+    <resultMap id="ShopRS" type="Shop">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="address" property="address"/>
+    </resultMap>
+
+    <select id="findById" resultMap="ShopRS" parameterType="int">
+        select id, name, address
+        from shop
+        where id = #{id:INTEGER}
+    </select>
+
+    <select id="findByName" resultMap="ShopRS" parameterType="string">
+        SELECT id, name, address
+        FROM shop
+        WHERE name = #{name:VARCHAR}
+    </select>
+
+</mapper>

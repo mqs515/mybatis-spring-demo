@@ -5,8 +5,10 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="LegoSet" type="org.mvnsearch.mybatis.demo.model.LegoSet"/>
+        <typeAlias alias="Shop" type="org.mvnsearch.mybatis.demo.model.Shop"/>
     </typeAliases>
     <mappers>
         <mapper resource="mapper/LegoSet.xml"/>
+        <mapper resource="mapper/Shop.xml"/>
     </mappers>
 </configuration>

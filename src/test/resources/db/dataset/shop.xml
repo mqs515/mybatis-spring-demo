@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE dataset SYSTEM "database.dtd">
+
+<dataset>
+    <shop id="1" name="Shop A" address="123 Main St"/>
+    <shop id="2" name="Shop B" address="456 Oak Ave"/>
+</dataset>

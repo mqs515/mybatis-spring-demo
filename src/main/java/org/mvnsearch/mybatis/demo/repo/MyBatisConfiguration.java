@@ -14,4 +14,11 @@ public class MyBatisConfiguration {
         factoryBean.setSqlSessionFactory(sqlSessionFactory);
         return factoryBean;
     }
+
+    @Bean
+    public MapperFactoryBean<ShopMapper> shopMapper(SqlSessionFactory sqlSessionFactory) {
+        MapperFactoryBean<ShopMapper> factoryBean = new MapperFactoryBean<>(ShopMapper.class);
+        factoryBean.setSqlSessionFactory(sqlSessionFactory);
+        return factoryBean;
+    }
 }
