@@ -5,16 +5,17 @@
     <resultMap id="LegoSetRS" type="LegoSet">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
+        <result column="description" property="description"/>
     </resultMap>
 
     <select id="findById" resultMap="LegoSetRS" parameterType="int">
-        select id, name
+        select id, name, description
         from lego_set
         where id = #{id:INTEGER}
     </select>
 
     <select id="findByName" resultMap="LegoSetRS" parameterType="string">
-        SELECT id, name
+        SELECT id, name, description
         FROM lego_set
         WHERE name = #{name:VARCHAR}
     </select>
