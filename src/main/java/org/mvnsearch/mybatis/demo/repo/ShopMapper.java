@@ -17,4 +17,6 @@ public interface ShopMapper {
 
     @Nullable
     Shop findByName(String name);
+
+    int deleteById(Integer id);
 }
